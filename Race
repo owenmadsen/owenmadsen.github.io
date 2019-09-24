@@ -1,0 +1,86 @@
+var bitmojiX = 53;
+var bitmojiY = 61;
+var bitmojiSpeed = random(1,5);
+
+var bunnyX = 53;
+var bunnyY = 170;
+var bunnySpeed = random(1,5);
+
+var frogX = 144;
+var frogY = 312;
+var frogSpeed = random(1,5);
+draw = function() {
+    background(255, 255, 255);
+    fill(255, 224, 189);
+    noStroke();
+    ellipse(bitmojiX,bitmojiY,70,69); //head
+    rect(bitmojiX-15,bitmojiY+20,30,23); //neck
+    fill(255, 255, 255);
+    ellipse(bitmojiX-14,bitmojiY-18,15,8); //left eye
+    ellipse(bitmojiX+14,bitmojiY-18,15,8); //right eye
+    fill(97, 57, 4);
+    ellipse(bitmojiX+14,bitmojiY-18,5,6); //right pupil
+    ellipse(bitmojiX-14,bitmojiY-18,5,6); //left pupil
+    fill(255, 255, 255);
+    stroke(0, 0, 0);
+    arc(bitmojiX+1,bitmojiY+8,33,21,0,180); //smile
+    line(bitmojiX-3,bitmojiY-3,bitmojiX+1,bitmojiY-16); //nose
+    line(bitmojiX-3,bitmojiY-3,bitmojiX+5,bitmojiY-3);
+    fill(41, 82, 120);
+    noStroke();
+    quad(bitmojiX-38,bitmojiY+78,bitmojiX-29,bitmojiY+40,bitmojiX+31,bitmojiY+40,bitmojiX+43,bitmojiY+78);     //shirt
+    fill(0, 0, 0);
+    arc(bitmojiX+1,bitmojiY-22,69,69,-175,-3); //hat
+    fill(255, 224, 189);
+    stroke(143, 143, 143);
+    strokeWeight(3);
+    arc(bitmojiX+1,bitmojiY-20,69,22,-160,-16); //hat brim
+    stroke(147, 206, 240);
+    line(bitmojiX-18,bitmojiY+65,bitmojiX-18,bitmojiY+54); //shirt
+    line(bitmojiX-5,bitmojiY+53,bitmojiX-18,bitmojiY+53);
+    line(bitmojiX-5,bitmojiY+65,bitmojiX-5,bitmojiY+56);
+    line(bitmojiX-5,bitmojiY+66,bitmojiX-18,bitmojiY+66);
+    line(bitmojiX+7,bitmojiY+65,bitmojiX+7,bitmojiY+53);
+    line(bitmojiX+15,bitmojiY+60,bitmojiX+22,bitmojiY+53);
+    line(bitmojiX+15,bitmojiY+60,bitmojiX+7,bitmojiY+53);
+    line(bitmojiX+22,bitmojiY+65,bitmojiX+22,bitmojiY+53);
+    bitmojiX = bitmojiX+bitmojiSpeed;
+    
+var Eyesize = 7;
+var Teeth = 10;
+fill(255, 245, 245);
+ellipse(bunnyX+33, bunnyY, 23, 44);  // left ear
+ellipse(bunnyX, bunnyY, 23, 44);  // right ear
+
+ellipse(bunnyX+17, bunnyY+35, 72, 54);    // face
+
+fill(0, 0, 0);
+ellipse(bunnyX+7, bunnyY+29, Eyesize, Eyesize);  // left eye
+ellipse(bunnyX+26, bunnyY+29, Eyesize, Eyesize);  // right eye
+
+line(bunnyX, bunnyY+42, bunnyX+30, bunnyY+42);   // mouth
+
+noFill();
+rect(bunnyX+3, bunnyY+42, Teeth, Teeth); // left tooth
+rect(bunnyX+18, bunnyY+42, Teeth, Teeth); // right tooth
+bunnyX = bunnyX +bunnySpeed;
+
+
+
+noStroke();
+fill(30, 204, 91); // a nice froggy green!
+
+ellipse(frogX, frogY, 178, 87); // face
+ellipse(frogX - 46, frogY - 50, 40, 40); // left eye socket
+ellipse(frogX + 46, frogY - 50, 40, 40); // right eye socket
+
+fill(255, 255, 255); // for the whites of the eyes!
+ellipse(frogX - 46, frogY - 50, 30, 30); // left eyeball
+ellipse(frogX + 46, frogY - 50, 30, 30); // right eyeball
+fill(0, 0, 0);
+ellipse(frogX,frogY,129,64);
+rect(frogX+41, frogY-55, 10,10); //left pupil
+rect(frogX-51, frogY-55, 10,10); //right pupil
+frogX = frogX + frogSpeed;
+    };
+
